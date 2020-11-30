@@ -1,0 +1,69 @@
+.user-tag__header {
+  margin-bottom: 24px !important;
+}
+
+.avatar-user {
+  border-radius: 50% !important;
+}
+
+.border {
+  border: 1px solid white;
+}
+
+.user-details {
+      padding-bottom: 16px !important;
+      padding-top: 16px !important;
+}
+
+.user-details__fullname {
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.user-details__username {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #586069;
+}
+
+
+.user-details__bio {
+  margin-bottom: 16px !important;
+  font-size: 16px;
+}
+
+.user-card-details {
+      list-style: none;
+      /* color: red; */
+}
+
+.user-card-detail {
+  vertical-align: top;
+  display: inline-block;
+  /* padding-left: 22px; */
+  font-size: 14px;
+}
+
+.user-card-detail .octicon {
+  float: left;
+  width: 16px;
+  margin-top: 3px;
+  /* margin-left: -24px; */
+  color: #6a737d;
+  text-align: center;
+}
+
+
+.avatar-group-item {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+/* .new-repo {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-self: stretch;
+} */
