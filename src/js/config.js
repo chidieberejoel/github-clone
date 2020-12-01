@@ -1,10 +1,10 @@
 module.exports = {
-  token: "a05ac6ed6b7ee395ed6f0ed083f3566d3a48aa86",
+  token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   url: "https://api.github.com/graphql",
   query: `{
   viewer {
     login
-    repositories(first: 20, orderBy: {field: UPDATED_AT, direction: DESC}) {
+    repositories(first: 20, orderBy: {field: UPDATED_AT, direction: ASC}) {
       edges {
         node {
           description

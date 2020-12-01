@@ -19,9 +19,10 @@ const getResults = async () => {
   console.log(res.data.data.viewer);
   const resData = res.data.data.viewer;
   navView.signedInAs(resData);
-  userDetails.userNames(resData)
-  // console.log(resData.repositories.edges[0].node.languages.edges[0].node.name);
+  userDetails.userNames(resData);
+  console.log(resData.repositories.edges)
   repositories.renderResult(resData.repositories.edges);
+  
 };
 
 
