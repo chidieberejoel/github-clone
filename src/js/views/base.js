@@ -1,7 +1,6 @@
 export const elements = {
   miniAvi: document.querySelector(".mini-image"),
   miniAvi2: document.querySelector(".mini-image2"),
-  stickyUserAvi: document.querySelector(".user-profile-sticky-bar"),
   userAvatar: document.querySelector(".user__avatar"),
   userBio: document.querySelector(".user-details__bio"),
   navDropDown: document.querySelector(".user-profile-link__span"),

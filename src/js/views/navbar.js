@@ -1,10 +1,5 @@
 import { elements } from "./base";
 
-// export const signedInAs = (item) => {
-//     const item = `<strong class="css-truncate-target">${item.name}</strong>`;
-//     elements.recipe.insertAdjacentHTML('afterbegin', markup);
-// }
-
 export const signedInAs = (el) => {
   const markup = `<strong class="css-truncate-target">${el.login}</strong>`;
 

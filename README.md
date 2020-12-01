@@ -22,4 +22,4 @@ npm start
 Your browser should automatically open on port 8080
 
 ### Additional Information
-In order to run this application successfully, your are to navigate to the config.js file and replace the "token" property with your personal access token. Learn more about GitHub access tokens [Here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+In order to run this file successfully, your are to open the .env file in a text editor and replace the "PERSONAL_ACCESS_TOKEN" property with your personal access token. Learn more about GitHub access tokens [Here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)

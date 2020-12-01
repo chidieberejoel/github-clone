@@ -1,5 +1,5 @@
 module.exports = {
-  token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  token: process.env.PERSONAL_ACCESS_TOKEN,
   url: "https://api.github.com/graphql",
   query: `{
   viewer {

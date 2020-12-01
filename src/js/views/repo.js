@@ -1,7 +1,7 @@
 import { elements } from "./base";
 
 export const userRepos = (elData) => {
-    const el = elData.node;
+  const el = elData.node;
   const svg1 = `<svg aria-label="fork" class="octicon octicon-repo-forked" viewBox="0 0 16 16" version="1.1"
                         width="16" height="16" role="img">
                         <path fill-rule="evenodd"
@@ -37,8 +37,7 @@ export const userRepos = (elData) => {
                     el.languages.edges.length == 0
                       ? ""
                       : `<span class="repo-lang">
-                      <span class="repo-lang__color p-relative d-inline-b" style="background-color: ${el.languages.edges[0].node.color
-                      }">
+                      <span class="repo-lang__color p-relative d-inline-b" style="background-color: ${el.languages.edges[0].node.color}">
                       </span>
                       <span> ${el.languages.edges[0].node.name}</span>
                     </span>`
@@ -98,11 +97,9 @@ export const userRepos = (elData) => {
   
   `;
 
-    elements.repositories.insertAdjacentHTML("afterbegin", repos);
+  elements.repositories.insertAdjacentHTML("afterbegin", repos);
 };
 
 export const renderResult = (repos) => {
   repos.slice().forEach(userRepos);
-  console.log(repos[0].node.languages.edges);
-}
-// [0].node.color;
+};
