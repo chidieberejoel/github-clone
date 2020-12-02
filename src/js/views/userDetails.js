@@ -1,4 +1,15 @@
 import { elements } from "./base";
+
+const usersOrg = (org) => {
+  const organization = `<div class="border-top padding-t-16 margin-t-16  hide-lg">
+                <h2 class="mb-2 h4">Organizations</h2>
+                <a href="#" class="avatar-group-item">
+                  <img alt="@${org.node.name}" width="32" height="32" src="${org.node.avatarUrl}" class="avatar">
+                </a>
+              </div>`;
+  elements.organizations.insertAdjacentHTML("afterbegin", organization);
+};
+
 export const userNames = (el) => {
   const avatar = `<div
                   class="user-tag__image q-width-100 q-float-l q-width-100 q-margin-r-0 p-relative f-shrink-0 float-l mq-d-inline-b mq-p-relative mq-f-shrink-0"
@@ -7,7 +18,33 @@ export const userNames = (el) => {
                     <img style="height: auto" alt="Avatar" width="260" height="260"
                       class="avatar avatar-user width-100  border bg-white" src="${el.avatarUrl}" />
                   </a>
+                  <div class="user-status-container p-relative hide-lg">
+                    <div class="user-status-circle-badge-container f5 ">
+                      <div class="user-status-circle-badge d-inline-b l-height-1 p-2 f5">
+                        <div>
+                          <div class="status-emoji list-n link-gray btn-link  btn-block no-underline">
+                            <div class="d-flex align-items-s ">
+                              <div class="f6 d-inline-flex circle ">
+                                <div class="user-status-emoji-container d-flex f-shrink-0 align-items-c justify-s-c">
+                                  <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>`;
+
+  const stickyAvi = `
+              <span class="user-profile-mini-avatar d-table-cell l-height-1 pr-2 v-align-mid">
+                  <img class="rounded-1 avatar-user" height="32" width="32" alt="@chidieberejoel" src="${el.avatarUrl}">
+                </span>
+                <span class="d-table-cell lh-condensed v-align-mid">
+                  <strong>${el.login}</strong>
+                </span>
+    `;
 
   const names = `<h1 class="padding-l-0 l-height-1">
                     <span class="user-details__fullname d-block overflow-h" itemprop="name">
@@ -40,19 +77,12 @@ export const userNames = (el) => {
                       <span> &nbsp; ${el.location}</span>
                     </li>`;
 
-  const renderResult = `
-        <div class="border-top padding-t-16 margin-t-16  hide-lg">
-                <h2 class="mb-2 h4">Organizations</h2>
-                <a href="#" class="avatar-group-item">
-                  <img alt="@${el.organizations.edges[0].node.name}" width="32" height="32" src="${el.organizations.edges[0].node.avatarUrl}" class="avatar">
-                </a>
-              </div>
-      `;
+  el.organizations.edges.slice().forEach(usersOrg);
 
+  elements.stickyUserAvi.insertAdjacentHTML("afterbegin", stickyAvi);
   elements.userAvatar.insertAdjacentHTML("afterbegin", avatar);
   elements.userNames.insertAdjacentHTML("afterbegin", names);
   elements.userBio.insertAdjacentHTML("afterbegin", bio);
   elements.follows.insertAdjacentHTML("afterbegin", followers);
   elements.locations.insertAdjacentHTML("afterbegin", locAndOrg);
-  elements.organizations.insertAdjacentHTML("afterbegin", renderResult);
 };

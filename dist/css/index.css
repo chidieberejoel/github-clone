@@ -624,4 +624,29 @@ img {
   display: none;
 }
 
+.user-profile-sticky-bar {
+  position: fixed;
+  top: 0px;
+  z-index: 90;
+  width: 233px;
+  word-break: break-all;
+  opacity: 0;
+  transition: all 0.2s ease 0s;
+}
+
+.user-profile-mini-vcard {
+  position: relative;
+  top: 1px;
+  z-index: 110;
+  height: 54px;
+}
+
+.user-profile-mini-vcard,
+.user-profile-sticky-bar::after {
+  height: 48px;
+}
+
+.user-profile-mini-avatar {
+  width: 32px;
+}
 /* ********************* Underlined Section End ********************* */
