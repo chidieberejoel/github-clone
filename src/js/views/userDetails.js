@@ -22,7 +22,7 @@ export const userNames = (el) => {
                     <div class="user-status-circle-badge-container f5 ">
                       <div class="user-status-circle-badge d-inline-b l-height-1 p-2 f5">
                         <div>
-                          <div class="status-emoji list-n link-gray btn-link  btn-block no-underline">
+                          <div class="status-emoji list-n link-gray btn-link  btn-block no-underline hover-def">
                             <div class="d-flex align-items-s ">
                               <div class="f6 d-inline-flex circle ">
                                 <div class="user-status-emoji-container d-flex f-shrink-0 align-items-c justify-s-c">

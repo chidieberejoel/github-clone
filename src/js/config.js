@@ -25,6 +25,7 @@ module.exports = {
           isFork
         }
       }
+      totalCount
     }
     bio
     organizations(first: 10) {
@@ -49,5 +50,6 @@ module.exports = {
     name
   }
 }
+
 `,
 };

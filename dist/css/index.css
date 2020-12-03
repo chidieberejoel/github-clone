@@ -610,7 +610,8 @@ img {
 .overlay-2,
 .overlay-3,
 .overlay-4,
-.overlay-5 {
+.overlay-5,
+.overlay-6 {
   position: fixed;
   top: 0px;
   right: 0px;

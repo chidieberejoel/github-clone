@@ -1,6 +1,6 @@
 import { elements } from "./base";
 
-//Reduce Repo description Title
+// Reduce Repo description Title
 const limitRepoDesc = (description, limit = 188) => {
   const newDesc = [];
   if (description.length > limit) {
@@ -14,6 +14,12 @@ const limitRepoDesc = (description, limit = 188) => {
     return `${newDesc.join(" ")}...`;
   }
   return description;
+};
+
+// Change Date Format
+const formatDate = (el) => {
+  const dateTime = new Date(el);
+  return dateTime.toString().slice(4, 10);
 };
 
 export const userRepos = (elData) => {
@@ -47,7 +53,6 @@ export const userRepos = (elData) => {
                       }
                   
                   <div class="repo-details">
-
                   ${
                     el.languages.edges.length == 0
                       ? ""
@@ -77,9 +82,9 @@ export const userRepos = (elData) => {
                                   
                     <span class="repo-lang">
                     <span>
-                      Updated <relative-time title="${el.updatedAt}">on ${
-    el.updatedAt.split("T")[0]
-  }
+                      Updated <relative-time title="${
+                        el.updatedAt
+                      }">on ${formatDate(el.updatedAt.split("T")[0])}
                       </relative-time>
                     </span>
                     </span>
@@ -88,8 +93,8 @@ export const userRepos = (elData) => {
                 <div class="repo__list-r d-flex justify-s-a flex-d-col">
                   <div class="align-r">
                     <div class="star-div d-inline-b">
-                      <form action="/" method="post">
-                        <button class="btn btn-sm" type="submit" title="Star">
+                      <div>
+                        <button class="btn btn-sm" title="Star">
                           <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16"
                             height="16" aria-hidden="true">
                             <path fill-rule="evenodd"
@@ -97,7 +102,7 @@ export const userRepos = (elData) => {
                             </path>
                           </svg> Star
                         </button>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>

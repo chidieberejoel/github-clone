@@ -364,6 +364,10 @@
   text-decoration: none !important;
 }
 
+.text-gray-dark {
+  color: #586069 !important;
+}
+
 .text-bold {
   font-weight: 600 !important;
 }
@@ -372,14 +376,8 @@
   text-align: center !important;
 }
 
-.user-status-suggestions {
-  height: 0;
-  opacity: 0;
-  transition: height 0.1s ease-out, opacity 0.2s ease-in;
-  overflow: hidden !important;
-  word-break: break-word;
-  white-space: normal;
-  display: block;
+.text-gray-dark {
+  color: #586069 !important;
 }
 
 .v-align-baseline {
@@ -633,6 +631,10 @@
 .css-truncate .css-truncate-target {
   display: block;
   vertical-align: top;
+}
+
+.hover-def:hover {
+  color: #0366d6 !important;
 }
 
 .css-truncate.css-truncate-overflow,

@@ -151,7 +151,7 @@
                     class="btn-link btn-block link-gray no-underline toggle-user-status-edit link-gray set-status"
                     id="toggle-user-status-edit" onclick="dropdownStatus()">
                     <div class="overlay-5" id="overlay-5"></div>
-                    <div class="d-flex align-items-c a-s-stretch link-gray">
+                    <div class="d-flex align-items-c a-s-stretch hover-def link-gray">
                       <div class="f6 lh-condensed user-status-header d-flex user-status-emoji-only-header circle">
                         <div
                           class="user-status-emoji-container f-shrink-0 mr-2 d-flex align-items-c justify-s-c lh-condensed-ultra v-align-bottom">
@@ -174,7 +174,7 @@
                     id="details-dial" tabindex="-1" aria-modal="true">
                     <form class="p-relative flex-auto" accept-charset="UTF-8">
                       <div class="Box-header bg-gray lh-condensed padding-16 border-bottom">
-                        <div class="Box-btn-octicon btn-octicon float-r outline-n" id="Box-btn-octicon"
+                        <div class="Box-btn-octicon btn-octicon float-r outline-n hover-def" id="Box-btn-octicon"
                           onClick="dropdownStatus()">
                           <svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16"
                             aria-hidden="true">
@@ -311,14 +311,15 @@
                     </path>
                   </svg>
                   Overview</a>
-                <a class="navbar-brand body-sect-1__item outlined" href="#"><svg
+                <a class="navbar-brand body-sect-1__item outlined repo-octicon" href="#"><svg
                     class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                     version="1.1" width="16" aria-hidden="true">
                     <path fill-rule="evenodd"
                       d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
                     </path>
                   </svg>
-                  Repositories <span class="badge badge-light">124</span></a>
+                  Repositories
+                </a>
                 <a class="navbar-brand body-sect-1__item" href="#"><svg
                     class="octicon octicon-project UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                     version="1.1" width="16" aria-hidden="true">
@@ -348,10 +349,135 @@
               <div class="user-profile-sticky-bar q-d-block hide-lg" id="user-profile-sticky-bar">
                 <div class="user-profile-mini-vcard d-table" id="aaaa"></div>
               </div>
-              <div class="d-block"> 
+              <div class="d-block">
                 <div class="margin-b-24 q-margin-b-0 q-d-block align-items-c d-flex user__avatar">
                   <div class="user-details mq-margin-0 mq-padding-0 mq-top-0 mq-float-l float-l"
                     style="position: sticky"></div>
+                </div>
+
+                <div class="hide-md user-status-container mb-2">
+                  <div class="rounded-1 px-2 py-1 mt-2 border">
+                    <div class="user-status-container">
+                      <div class="link-gray btn-link btn-block no-underline list-n" onclick="dropdownStatusMini()">
+                        <div class="overlay-6" id="overlay-6"></div>
+
+                        <div class="d-flex align-items-s">
+                          <div class="d-flex lh-condensed f6 circle">
+                            <div
+                              class="d-flex lh-condensed-ultra mr-2 v-align-bottom f-shrink-0 align-items-c justify-s-c">
+                              <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16"
+                                height="16" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                  d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z">
+                                </path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="user-status-message-wrapper f6 min-width-0" style="line-height: 20px">
+                            <div class="css-truncate css-truncate-target text-left width-fit">
+                              <span class="text-gray">Set status</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="details-dial rounded-1 Box Box--overlay anim-fade anim-d-3 lh-condensed f6 outline-n"
+                        id="details-dial-mini" tabindex="-1" aria-modal="true">
+                        <form class="p-relative flex-auto" accept-charset="UTF-8">
+                          <div class="Box-header bg-gray lh-condensed padding-16 border-bottom">
+                            <div class="Box-btn-octicon btn-octicon float-r outline-n hover-def"
+                              onclick="dropdownStatusMini()">
+                              <svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                  d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z">
+                                </path>
+                              </svg>
+                            </div>
+                            <h3 class="text-bold f5 text-gray-dark">
+                              Edit status
+                            </h3>
+                          </div>
+
+                          <div class="padding-r-16 padding-l-16 padding-b-8 padding-t-8 text-gray-dark">
+                            <div class="mt-2 p-relative">
+                              <div class="d-table mt-n1 margin-b-0 form-group">
+                                <div class="d-table-cell v-align-mid" style="width: 1%">
+                                  <button type="button" class="btn btn-outline smiley-button">
+                                    <span class="text-gray">
+                                      <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16"
+                                        height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                          d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z">
+                                        </path>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+
+                                <div>
+                                  <input type="text" autocomplete="off" placeholder="What's happening?"
+                                    class="status-input d-table-cell width-100" />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="overflow-auto padding-r-16 padding-l-16 margin-r-n0 border-bottom"
+                              style="max-height: 33vh">
+                              <div class="user-status-limited-availability-container">
+                                <div class="margin-t-0 margin-b-0 form-checkbox">
+                                  <input type="checkbox" name="limited_availability" value="1" />
+                                  <label class="d-block f5 mb-1 text-gray-dark" for="limited_availability">Busy</label>
+                                  <p class="note">
+                                    When others mention you, assign you, or
+                                    request your review, GitHub will let them
+                                    know that you have limited availability.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="d-inline-b f5 padding-t-16 padding-b-8 mr-2">
+                              <div class="d-inline-b margin-r-4">
+                                Clear status
+                              </div>
+                              <div class="f6 dropdown details-reset details-overlay d-inline-b mr-2">
+                                <summary class="btn btn-sm v-align-baseline">
+                                  <div class="d-inline-b v-align-baseline">
+                                    Never
+                                  </div>
+                                  <div class="caret-down"></div>
+                                </summary>
+                              </div>
+                            </div>
+
+                            <div class="d-inline-b f5 padding-t-16 padding-b-8 mr-2">
+                              <div class="d-inline-b margin-r-4">
+                                Visible to
+                              </div>
+                              <div class="f6 dropdown details-reset details-overlay d-inline-b mr-2">
+                                <summary class="btn btn-sm v-align-baseline">
+                                  <div class="d-inline-b v-align-baseline">
+                                    Everyone
+                                  </div>
+                                  <div class="caret-down"></div>
+                                </summary>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex padding-16 align-items-c justify-s-b border-top">
+                            <button type="submit" class="btn width-100 mr-2 btn-set-status btn-blue">
+                              Set Status
+                            </button>
+
+                            <button type="submit" class="btn width-100 ml-2 btn-set-status btn-grey">
+                              Clear Status
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="user-details__bio d-block float-l"></div>
@@ -388,7 +514,7 @@
                   Overview
                 </a>
 
-                <a href="#" class="user-nav__item selected">
+                <a href="#" class="user-nav__item selected repo-octicon-mini">
                   <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                     version="1.1" width="16" aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -396,7 +522,6 @@
                     </path>
                   </svg>
                   Repositories
-                  <span title="124" class="Counter">124</span>
                 </a>
 
                 <a href="#" class="user-nav__item">
